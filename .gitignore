@@ -1,0 +1,53 @@
+# ALLOWLIST, NOT A DENYLIST.
+#
+# This repository distributes the built plugin's documentation and diagnostic
+# tools. It must never contain plugin source, build files, internal working
+# documents, or collected diagnostic output describing a real estate.
+#
+# A denylist of known-bad filenames fails the moment a new one is invented, and
+# the failure is silent — the file just gets committed. So everything is ignored
+# by default and only the shipping set is un-ignored below.
+#
+# Consequence worth knowing: a genuinely new public file will not stage until it
+# is added here. That is the intended trade. `git status --ignored` shows what
+# is being held back.
+
+*
+
+# --- The shipping set -------------------------------------------------------
+!README.md
+!LICENSE
+!NOTICE
+!CHANGELOG.md
+!FEEDBACK.md
+!.gitignore
+
+# Issue forms. Each level must be un-ignored in turn: git will not re-include a
+# file whose parent directory is still excluded, so dropping any one of these
+# three lines silently loses the templates.
+!.github/
+!.github/ISSUE_TEMPLATE/
+!.github/ISSUE_TEMPLATE/*.yml
+
+!docs/
+!docs/*.md
+!docs/images/
+!docs/images/.gitkeep
+!docs/images/*.png
+!docs/images/*.jpg
+!docs/images/*.svg
+
+!tools/
+!tools/*.sh
+!tools/*.sql
+
+# --- Never, under any circumstances ------------------------------------------
+# Restated explicitly so they stay excluded even if the rules above are ever
+# loosened. Release artifacts are attached to GitHub Releases, not committed;
+# collected diagnostics describe real infrastructure.
+release/
+*.jar
+*.jar.sha256
+perch-diag-appliance-*.txt
+perch-diag-host-*.txt
+perch-diag-db.txt

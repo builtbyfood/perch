@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Perch">
+  <title>Perch</title>
+
+  <!-- A bird drawn as a topology: three nodes, two edges, on a perch.
+       Same visual language as the node glyphs — circles and strokes, nothing else.
+       Reads as a bird at 16px; reads as a graph on inspection. -->
+
+  <g fill="none" stroke="currentColor" stroke-width="2.5"
+     stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- the perch -->
+    <path d="M 8 48 L 56 48" stroke-width="3"/>
+
+    <!-- legs -->
+    <path d="M 28 36 L 26 48"/>
+    <path d="M 34 36 L 36 48"/>
+
+    <!-- edges: tail -> body -> head -->
+    <path d="M 17 24 L 30 30"/>
+    <path d="M 30 30 L 43 20"/>
+
+    <!-- beak -->
+    <path d="M 48 20 L 56 22"/>
+  </g>
+
+  <!-- nodes -->
+  <circle cx="17" cy="24" r="3.5" fill="currentColor"/>
+  <circle cx="30" cy="30" r="6"   fill="currentColor"/>
+  <circle cx="43" cy="20" r="5"   fill="currentColor"/>
+
+  <!-- eye: punched out of the head node -->
+  <circle cx="45" cy="18" r="1.4" fill="#ffffff"/>
+</svg>
