@@ -4,7 +4,7 @@
 
 # Perch
 
-**Read-only topology for HPE Morpheus and VM Essentials.**
+**Read-only topology for HPE Morpheus and VM Essentials, Advanced, Enterprise.**
 
 ![version](https://img.shields.io/badge/version-0.3.102-blue)
 ![morpheus](https://img.shields.io/badge/Morpheus-9.0.1%2B-green)
